@@ -1,0 +1,165 @@
+#navigation {
+    padding-left: 15vw;
+
+}
+#navigation>* {
+    position: relative;
+    z-index: 2;
+    padding-right: 10vh !important;
+}
+
+#navigation:before {
+    content: '';
+    position: absolute;
+    left: 15vw;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+}
+#navigation:after {
+    content: '';
+    position: fixed;
+    opacity: 1;
+    pointer-events: none;
+    left: -15px;
+    top: 0;
+    bottom: 0;
+    right: -15px;
+    background: rgba(28,33,45, 0.85);
+    z-index: -1;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+}
+#navigation #closeNavigation{
+    position: absolute;
+    left: 15vw;
+    width: 35px;
+    height: 40px;
+    padding: 0 !important;
+    margin: 0 0 0 -35px;
+    top: 7vh;
+    border: none;
+    background: white;
+    border-radius: 4px 0 0 4px
+}
+
+#navigation #closeNavigation:before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--purple);
+    border-width: 1px 1px 0 0;
+    left: 5px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+#navigation #closeNavigation:after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 1px;
+    background: var(--purple);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+#navigation > [name="profile"]{
+    height: 10%;
+    padding: 8vh 0;
+    color: var(--purple);
+}
+#navigation > [name="profile"] > p {
+    margin: 12px;
+}
+#navigation > [name="profile"] [name="image"]{
+    width: 10vh;
+    height: 10vh;
+    float: right;
+    margin-left: 10px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+#navigation > [name="profile"] [name="image"] img{
+    height: 100%;
+    width: 100%;
+}
+#navigation [name="main-menu"]{
+    padding-left: 10vh !important;
+}
+#navigation [name="main-menu"] > ul {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    border-top: 1px solid #eaeaea;
+}
+#navigation [name="main-menu"] > ul > li{
+    height: 2.5rem;
+    position: relative;
+    font-size: 16px;
+}
+
+#navigation [name="main-menu"] > ul > li > a{
+    padding-right: 25px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    color: #000;
+}
+
+#navigation [name="main-menu"]  a:before{
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url(../../../assets/icon/menu-icons.png);
+    background-size: auto 200%;
+}
+
+#navigation [name="main-menu"] [name="home"] a:before{
+    background-position: -44px 0px;
+}
+#navigation [name="main-menu"] [name="blog"] a:before{
+    background-position: -88px 0px;
+}
+#navigation [name="main-menu"] [name="contact"] a:before{
+    background-position: -110px 0px;
+}
+
+#navigation [name="main-menu"] [name="account"] a:before{
+    background-position: -132px 0px;
+}
+
+#navigation [name="main-menu"] [name="logout"] a:before{
+    background-position: -154px 0px;
+}
+
+#navigation [name="main-menu"] [name="register"] a:before{
+    background-position: -154px 22px;
+}
+
+#navigation > [name="info"]{
+    height: 8vh;
+    line-height: 8vh;
+    border-top: 1px solid #eaeaea;
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    bottom: 0;
+    left: 15vw;
+    right: 0;
+}
+

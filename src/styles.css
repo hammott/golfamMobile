@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'yekan';
+    font-style: normal;
+    font-weight: bold;
+    src: url('assets/font/iranyekanwebbold.svg') format("svg");
+    src: url('assets/font/iranyekanwebbold.eot');
+    src: url('assets/font/iranyekanwebbold.eot?#iefix') format('embedded-opentype'),
+        url('assets/font/iranyekanwebbold.woff2') format('woff2'),
+        url('assets/font/iranyekanwebbold.woff') format('woff'),
+        url('assets/font/iranyekanwebbold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'yekan';
+    font-style: normal;
+    font-weight: normal;
+    src: url('assets/font/iranyekanwebregular.svg') format("svg");
+    src: url('assets/font/iranyekanwebregular.eot');
+    src: url('assets/font/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),
+        url('assets/font/iranyekanwebregular.woff2') format('woff2'),
+        url('assets/font/iranyekanwebregular.woff') format('woff'),
+        url('assets/font/iranyekanwebregular.ttf') format('truetype');
+}
+
+/* Latin fonts (Roboto) */
+
+@font-face {
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: bold;
+    src: url('assets/font/robotobold.eot');
+    src: url('assets/font/robotobold.eot?#iefix') format('embedded-opentype'),
+        url('assets/font/robotobold.woff2') format('woff2'),
+        url('assets/font/robotobold.woff') format('woff'),
+        url('assets/font/robotobold.ttf') format('truetype');
+
+}
+
+@font-face {
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: normal;
+    src: url('assets/font/robotoregular.eot');
+    src: url('assets/font/robotoregular.eot?#iefix') format('embedded-opentype'),
+        url('assets/font/robotoregular.woff2') format('woff2'),
+        url('assets/font/robotoregular.woff') format('woff'),
+        url('assets/font/robotoregular.ttf') format('truetype');
+}
+
+
+* , body{
+    direction: rtl;
+    font: 400 1em "yekan","roboto",sans-serif !important;
+    
+}
+body{
+    box-sizing: border-box;
+    text-align: right;
+}
+body, ul, li, h1, h2, h3, h4, h5, h6, a, input, b, p, i {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    outline: none;
+    font-weight: normal;
+    font-style: normal;
+}
+a{
+    text-decoration: none;
+}
+
+:root {
+    --purple: #37307D;
+}

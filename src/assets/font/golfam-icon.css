@@ -1,0 +1,388 @@
+@font-face {
+    font-family: golfam-icon;
+    src: url(/new_theme/css/font/golfam_reg-regular-webfont.eot);
+    src: url(/new_theme/css/font/golfam_reg-regular-webfont.eot?#iefix&v=4.6.2) format("embedded-opentype"),
+    url(/new_theme/css/font/golfam_reg-regular-webfont.woff2) format("woff2"),
+    url(/new_theme/css/font/golfam_reg-regular-webfont.woff) format("woff"),
+    url(/new_theme/css/font/golfam_reg-regular-webfont.ttf) format("truetype"),
+    url(/new_theme/css/font/golfam_reg-regular-webfont.svg?v=4.6.2#fontawesomeregular) format("svg");
+    font-weight: 400;
+    font-style: normal;
+}
+.gf-icon-xl{
+    font-family: golfam-icon !important;
+    font-size: 2.2em;
+    font-style: normal;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.gf-icon-lg{
+    font-family: golfam-icon !important;
+    font-size: 1.9em;
+    font-style: normal;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.gf-icon-md{
+    font-family: golfam-icon !important;
+    font-size: 1.6em;
+    font-style: normal;
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.gf-icon-sm{
+    font-family: golfam-icon !important;
+    font-size: 1.3em;
+    font-style: normal;
+
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.gf-icon-xs{
+    font-family: golfam-icon !important;
+    font-size: 1em;
+    font-style: normal;
+
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+.gf-icon-2xs{
+    font-family: golfam-icon !important;
+    font-size: 0.7em;
+    font-style: normal;
+
+
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+/******* rotate ********/
+.gf-rotate-90{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.gf-rotate-180{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.gf-rotate-270{
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
+/** ! **/
+.gf-33:before { content:'!' }
+
+/** " **/
+.gf-34:before { content:'"' }
+
+/** # **/
+.gf-35:before { content:'#' }
+
+/** $ **/
+.gf-36:before { content:'$' }
+
+/** % **/
+.gf-37:before { content:'%' }
+
+/** & **/
+.gf-38:before { content:'&' }
+
+/** ' **/
+.gf-39:before { content:'\'' }
+
+/** ( **/
+.gf-40:before { content:'(' }
+
+/** ) **/
+.gf-41:before { content:')' }
+
+/** * **/
+.gf-42:before { content:'*' }
+
+/** + **/
+.gf-43:before { content:'+' }
+
+/** , **/
+.gf-44:before { content:',' }
+
+/** - **/
+.gf-45:before { content:'-' }
+
+/** . **/
+.gf-46:before { content:'.' }
+
+/** / **/
+.gf-47:before { content:'/' }
+
+/** 0 **/
+.gf-48:before { content:'0' }
+
+/** 1 **/
+.gf-49:before { content:'1' }
+
+/** 2 **/
+.gf-50:before { content:'2' }
+
+/** 3 **/
+.gf-51:before { content:'3' }
+
+/** 4 **/
+.gf-52:before { content:'4' }
+
+/** 5 **/
+.gf-53:before { content:'5' }
+
+/** 6 **/
+.gf-54:before { content:'6' }
+
+/** 7 **/
+.gf-55:before { content:'7' }
+
+/** 8 **/
+.gf-56:before { content:'8' }
+
+/** 9 **/
+.gf-57:before { content:'9' }
+
+/** : **/
+.gf-58:before { content:':' }
+
+/** ; **/
+.gf-59:before { content:';' }
+
+/** < **/
+.gf-60:before { content:'<' }
+
+/** = **/
+.gf-61:before { content:'=' }
+
+/** > **/
+.gf-62:before { content:'>' }
+
+/** ? **/
+.gf-63:before { content:'?' }
+
+/** @ **/
+.gf-64:before { content:'@' }
+
+/** A **/
+.gf-65:before { content:'A' }
+
+/** B **/
+.gf-66:before { content:'B' }
+
+/** C **/
+.gf-67:before { content:'C' }
+
+/** D **/
+.gf-68:before { content:'D' }
+
+/** E **/
+.gf-69:before { content:'E' }
+
+/** F **/
+.gf-70:before { content:'F' }
+
+/** G **/
+.gf-71:before { content:'G' }
+
+/** H **/
+.gf-72:before { content:'H' }
+
+/** I **/
+.gf-73:before { content:'I' }
+
+/** J **/
+.gf-74:before { content:'J' }
+
+/** K **/
+.gf-75:before { content:'K' }
+
+/** L **/
+.gf-76:before { content:'L' }
+
+/** M **/
+.gf-77:before { content:'M' }
+
+/** N **/
+.gf-78:before { content:'N' }
+
+/** O **/
+.gf-79:before { content:'O' }
+
+/** P **/
+.gf-80:before { content:'P' }
+
+/** Q **/
+.gf-81:before { content:'Q' }
+
+/** R **/
+.gf-82:before { content:'R' }
+
+/** S **/
+.gf-83:before { content:'S' }
+
+/** T **/
+.gf-84:before { content:'T' }
+
+/** U **/
+.gf-85:before { content:'U' }
+
+/** V **/
+.gf-86:before { content:'V' }
+
+/** W **/
+.gf-87:before { content:'W' }
+
+/** X **/
+.gf-88:before { content:'X' }
+
+/** Y **/
+.gf-89:before { content:'Y' }
+
+/** Z **/
+.gf-90:before { content:'Z' }
+
+/** [ **/
+.gf-91:before { content:'[' }
+
+/** \ **/
+.gf-92:before { content:'\005C' }
+
+/** ] **/
+.gf-93:before { content:']' }
+
+/** ^ **/
+.gf-94:before { content:'^' }
+
+/** _ **/
+.gf-95:before { content:'_' }
+
+/** ` **/
+.gf-96:before { content:'`' }
+
+/** a **/
+.gf-97:before { content:'a' }
+
+/** b **/
+.gf-98:before { content:'b' }
+
+/** c **/
+.gf-99:before { content:'c' }
+
+/** d **/
+.gf-100:before { content:'d' }
+
+/** e **/
+.gf-101:before { content:'e' }
+
+/** f **/
+.gf-102:before { content:'f' }
+
+/** g **/
+.gf-103:before { content:'g' }
+
+/** h **/
+.gf-104:before { content:'h' }
+
+/** i **/
+.gf-105:before { content:'i' }
+
+/** j **/
+.gf-106:before { content:'j' }
+
+/** k **/
+.gf-107:before { content:'k' }
+
+/** l **/
+.gf-108:before { content:'l' }
+
+/** m **/
+.gf-109:before { content:'m' }
+
+/** n **/
+.gf-110:before { content:'n' }
+
+/** o **/
+.gf-111:before { content:'o' }
+
+/** p **/
+.gf-112:before { content:'p' }
+
+/** q **/
+.gf-113:before { content:'q' }
+
+/** r **/
+.gf-114:before { content:'r' }
+
+/** s **/
+.gf-115:before { content:'s' }
+
+/** t **/
+.gf-116:before { content:'t' }
+
+/** u **/
+.gf-117:before { content:'u' }
+
+/** v **/
+.gf-118:before { content:'v' }
+
+/** w **/
+.gf-119:before { content:'w' }
+
+/** x **/
+.gf-120:before { content:'x' }
+
+/** y **/
+.gf-121:before { content:'y' }
+
+/** z **/
+.gf-122:before { content:'z' }
+
+/** { **/
+.gf-123:before { content:'{' }
+
+

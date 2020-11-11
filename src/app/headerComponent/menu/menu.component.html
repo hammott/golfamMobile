@@ -1,0 +1,28 @@
+
+    <div id="navigation">
+		<button id="closeNavigation" name="close" (click)="closeMenu()"></button>
+		<div name="profile">
+			<div name="image" class="default" ><img [src]="menuImage"/></div>
+			<p>نام آژانس</p>
+			<p>نام کاربر آژانس</p>
+		</div>	
+		<div name="main-menu">
+			<ul>
+				<li name="home"><a routerLink="">صفحه اصلی</a></li>
+				<li name="blog" ><a routerLink="ticket">بلیط</a></li>
+				<li name="blog"><a routerLink="hotel">هتل</a></li>
+				<li name="blog"><a routerLink="tour">تور</a></li>
+				<li name="contact"><a routerLink="contact">تماس با ما</a></li>
+			</ul>
+			<ul>
+				<li name="account" ><a routerLink="profile">مشاهده حساب</a></li>
+				<li name="logout"><a>خروج</a></li>
+				<li name="register"><a data-toggle="modal" data-target="#customer_signup_dlg">ثبت نام کاربر جدید</a></li>
+			</ul>
+		</div>
+
+	
+	<div name="info">
+		<i class="faNum" name="version">نسخه 1.0.2</i>
+	</div>
+</div>

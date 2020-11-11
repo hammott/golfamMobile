@@ -1,0 +1,15 @@
+<div class="mo-content">
+    <img [src]="backgroundIMG" alt="" class="background">
+
+    <div class="mo-search-box">
+        <div class="mo-search-box-header">
+            <searchbox-tabs [num]="num" (setTabNum)="getNum($event)"></searchbox-tabs>
+        </div>
+        <div class="mo-search-box-content">
+            <int-flight-search></int-flight-search>
+            <dom-flight-search></dom-flight-search>
+            <tour-search></tour-search>
+            <hotel-search></hotel-search>
+        </div>
+    </div>
+</div>

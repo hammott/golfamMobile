@@ -1,0 +1,29 @@
+
+<ng-container *ngIf ="getPath === '/' else elseImg" >
+  <section class="mo-menu">
+    <div class="mo-humberger-menu" id="mo-humberger-nav" (click)="openMenu()">
+        <a ><span></span></a >
+    </div>
+    <div class="mo-logo">
+      <a href=""><img [src]="LogoBlue"></a>
+    </div>
+  </section>
+</ng-container>
+
+
+<ng-template #elseImg>
+  <section class="mo-menu-fixed mo-bg-blue">
+    <div class="mo-humberger-menu" id="mo-humberger-nav" (click)="openMenu()">
+        <a ><span></span></a>
+    </div>
+    <div class="mo-logo-fixed">
+      <a href=""><img [src]="LogoWhite"></a>
+    </div>
+  </section>
+</ng-template>
+
+
+
+<div class="menu" [class.open]="isOpen" >
+  <app-menu [isOpen]="isOpen" (changeIsOpen)="closeMenu($event)"></app-menu>
+</div>

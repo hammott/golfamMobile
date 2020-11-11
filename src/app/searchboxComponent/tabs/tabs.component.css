@@ -1,0 +1,42 @@
+.mo-list-container {
+    height: 55px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    direction: ltr;
+}
+.mo-list-container::-webkit-scrollbar {
+    display:none;
+}
+.mo-tabs {
+    width: 430px;
+    height: 55px;
+    padding: 0 15px;
+    min-width: 100%;
+    list-style: none;
+    position: relative;
+    display: block;
+    margin: 0;
+    transition: .6s;
+}
+.mo-tabs li {
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+    color: #808080;
+    list-style: none;
+    float: right;
+    width: 100px;
+    overflow: hidden;
+    text-align: center;
+    transition: .15s;
+}
+li.activeTabs {
+    border-bottom: 3px solid var(--purple);
+    color: var(--purple) !important;
+    font-weight: bold;
+}
+

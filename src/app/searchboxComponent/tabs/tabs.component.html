@@ -1,0 +1,20 @@
+<div class="mo-list-container">
+    <ul class="mo-tabs">
+        <li class="mo-tabs-list"  id="mo-flight-des"
+            [class.activeTabs]=true 
+            (click)="tabsClick($event)"
+            tabsNum = 1>پرواز خارجی</li>
+        <li class="mo-tabs-list" id="mo-flight-dom" 
+            [class.activeTabs]=false  
+            (click)="tabsClick($event)"
+            tabsNum = 2>پرواز داخلی</li>
+        <li class="mo-tabs-list" id="mo-pakage" 
+            [class.activeTabs]=false 
+            (click)="tabsClick($event)"
+            tabsNum = 3>بسته سفر</li>
+        <li class="mo-tabs-list" id="mo-hotel"
+            [class.activeTabs]=false  
+            (click)="tabsClick($event)"
+            tabsNum = 4> رزرو هتل</li>
+    </ul>
+</div>
