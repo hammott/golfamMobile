@@ -7,9 +7,33 @@
         </div>
         <div class="mo-search-box-content">
             <int-flight-search></int-flight-search>
-            <dom-flight-search></dom-flight-search>
+            <dom-flight-search (runDatePicker)="datePickerRun($event)"
+                                (openPassengerModal)="openModalPassenger($event)"
+                                [passengerFlightInfo]=passengerFlightInfo>
+                
+            </dom-flight-search>
             <tour-search></tour-search>
             <hotel-search></hotel-search>
+            <input type="text" #domDatpicker>
         </div>
+    </div>
+</div>
+
+
+<div>
+    <ng-persian-datepicker [class.display-none]="isDatepicker" 
+                        [dateOnSelect]="config.date.onSelect"
+                        [timeEnable]="config.time.enable"
+                        [dateFormat]="'jYYYY/jMM/jDD'" 
+                        [input]="domDatpicker"></ng-persian-datepicker>
+</div>
+
+
+<div class="mo-passenger-info" [class.show-modal]="isOpenModal">
+    <div *ngIf=isOpenModal>
+        <passenger-modal (closePassengerModal)="closeModalPassenger($event)" 
+                        (acceptPassenger)="acceptPasengerInfo($event)"
+                        [passengerFlightInfo]="passengerFlightInfo"></passenger-modal> 
+                        
     </div>
 </div>

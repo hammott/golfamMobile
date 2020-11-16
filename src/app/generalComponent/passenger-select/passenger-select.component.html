@@ -1,0 +1,72 @@
+<div class="mo-passenger-info-modal">
+    <form #passengerForm="ngForm" (ngSubmit)= "onSubmit()">
+        <div class="mo-passenger-info-modal-header">
+            <h3 class="mo-journey-type">
+                کلاس پرواز
+            </h3>
+           <div class="mo-journey-type-choose">
+               <span>
+                    <input class="mo-passenger-radio" type="radio" name="flightClass" value="economy" checked #flightClass="ngModel" [(ngModel)]="passengerModel.flightClass">
+                    <label>اکونومی</label>
+                </span>
+                <span>
+                    <input class="mo-passenger-radio" type="radio" name="flightClass" value="business"  #flightClass="ngModel" [(ngModel)]="passengerModel.flightClass">
+                    <label>بیزینس</label>
+                </span>
+                <span>
+                    <input class="mo-passenger-radio" type="radio" name="flightClass" value="first"  #flightClass="ngModel" [(ngModel)]="passengerModel.flightClass">
+                    <label>فرست</label>
+                </span>
+           </div>
+        </div>
+        <div class="mo-passenger-info-modal-content">
+            <h3 class="mo-journey-type">
+                مسافرن
+            </h3>
+            <div class="mo-passenger-info-collect">
+                <div class="mo-passenger-info-collect-row">
+                    <span class="farsiNum titlePassenger">
+                        بزرگسال (12 سال به بالا)
+                    </span>
+                    <span class="changeButtonPassenger">
+                        <a class="mo-plus" data-type="plus" for="adult"></a>
+                        <input type="text" name="adult" class="mo-input-number farsiNum"  #adult="ngModel" [(value)]="adultValue" min="1" max="9" readonly [(ngModel)]="passengerModel.adult">
+                        <a class=" mo-minus" data-type="minus" for="adult"></a>
+                    </span>
+                </div>
+    
+                <div class="mo-passenger-info-collect-row">
+                    <span class="farsiNum titlePassenger">
+                        کودک (2 تا 12 سال)
+                    </span>
+                    <span class="changeButtonPassenger">
+                        <a class="mo-plus" data-type="plus" for="child"></a>
+                        <input type="text" name="child" class="mo-input-number farsiNum"  #child="ngModel" [(value)]="childValue" min="0" max="9" readonly [(ngModel)]="passengerModel.child">
+                        <a class=" mo-minus" data-type="minus" for="child"></a>
+                    </span>
+                </div>
+    
+                <div class="mo-passenger-info-collect-row">
+                    <span class="farsiNum titlePassenger">
+                        نوزاد (10 روز تا 2 سال)
+                    </span>
+                    <span class="changeButtonPassenger">
+                        <a class="mo-plus" data-type="plus" for="infant"></a>
+                        <input type="text" name="infant" class="mo-input-number farsiNum"  #infant="ngModel" [(value)]="infantValue" min="0" max="9" readonly [(ngModel)]="passengerModel.infant">
+                        <a class=" mo-minus" data-type="minus" for="infant"></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        {{passengerModel |json}}
+        {{ passengerForm.value | json}}
+        <div class="mo-passenger-info-modal-footer">
+            <div class="mo-passenger-info-modal-footer-btn">
+                <a class="closeModal" (click)=closeModal()><button>بازگشت</button></a>
+                <a  id="acceptPassengerInfo"><button value="" type="submit">برگزیدن </button></a>
+            </div>
+        </div>
+    </form>
+    
+
+</div>

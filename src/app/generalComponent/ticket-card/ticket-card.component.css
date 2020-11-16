@@ -1,0 +1,322 @@
+.mo-ticket-container {
+    position: relative;
+    line-height: 2;
+    margin: 0 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 3px 0 rgba(0,0,0,0.2);
+    padding: 0 5px;
+    margin-bottom: 20px;
+}
+
+.mo-ticket-head {
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr;
+    padding: 12px 0;
+    position: relative;
+}
+
+.backDashedInBottom {
+    position: relative;
+}
+.backDashedInBottom::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    bottom: 0;
+    left: 10px;
+    right: 10px;
+    background-image: linear-gradient(to left,#e0e0e0 80%,white 0);
+    background-position: right;
+    background-size: 12px 12px;
+    background-repeat: repeat-x;
+}
+
+.mo-ticket-airline-logo {
+    position: relative;
+}
+
+.mo-ticket-airline-logo img {
+    position: absolute;
+    border-radius: 50%;
+    width: 2.1em;
+    height: 2.1em;
+    margin: 0;
+    right: 20px;
+    -webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.63);
+    -moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.63);
+    box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.63);
+}
+.mo-ticket-airline-logo img:nth-child(1) {
+    z-index: 2;
+}
+.mo-ticket-airline-logo img:nth-child(2) {
+    right: 38px;
+    z-index: 3;
+}
+.mo-ticket-airline-logo img:nth-child(3) {
+    z-index: 1;
+    right: 4px;
+}
+.mo-ticket-airline-name {
+    margin-right: 6px;
+}
+.mo-ticket-airline-name h3 {
+    font-size: 15px !important;
+}
+.mo-ticket-airline-name p {
+    font-size: 10px !important;
+    text-transform: uppercase;
+}
+
+.mo-ticket-airline-detail {
+    text-align: left;
+    margin-left: 8px;
+}
+.mo-ticket-airline-detail span:nth-child(1) {
+    font-size: 13px !important;
+    display: inline-block;
+}
+.mo-ticket-airline-detail span:nth-child(2) {
+    margin-left: 5px;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 0px 7px -10px 0;
+    background: url(../../../assets/icon/icon.png);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-size: 104px 104px;
+    background-position: -78px -26px;
+}
+
+.mo-ticket-content {
+    padding-bottom: 8px;
+}
+.mo-ticket-row {
+    display: grid;
+    grid-template-columns: 3fr 5fr 3fr;
+    margin-top: 11px;
+    margin-left: 5px;
+    margin-right: 15px;
+    position: relative;
+}
+.mo-ticket-badge {
+    position: absolute;
+    transform: rotate(90deg) translateY(-32px);
+    width: 40px;
+    text-align: center;
+    min-width: 30px;
+    background: #eaeaea;
+    color: #595959;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    font-size: 9px !important;
+    margin-top: 21px;
+    height: 18px;
+    padding: 0;
+}
+.mo-ticket-origin, .mo-ticket-destination {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mo-ticket-origin {
+    padding-left: 10px;
+}
+
+
+.mo-ticket-row small {
+    font-size: 60% !important;
+    font-weight: 400;
+}
+.mo-ticket-timeline {
+    position: relative;
+    overflow: hidden;
+}
+.mo-ticket-timeline-date {
+    font-size: 10px !important;
+}
+
+.mo-ticket-timeline-date .mo-flight-duration, 
+.mo-ticket-timeline-date .mo-flight-duration span, 
+.mo-ticket-timeline-date .mo-flight-duration p, 
+.mo-ticket-timeline-date .mo-flight-stops, 
+.mo-ticket-timeline-date .mo-flight-stops span, 
+.mo-ticket-timeline-date .mo-flight-stops p{
+    display: inline-block;
+}
+
+.mo-ticket-timeline-date .mo-flight-stops {
+    float: left;
+    font-weight: bold;
+}
+
+.mo-ticket-line {
+    margin-top: 7px;
+}
+
+.mo-ticket-stops {
+    display: table;
+    width: 100%;
+    position: relative;
+}
+
+.mo-ticket-stops::before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: #eaeaea;
+    width: 100%;
+    top: 1px;
+}
+
+.mo-ticket-stops>span {
+    display: table-cell;
+    position: relative;
+    font-size: 11px !important;
+    color: #999;
+    text-align: center;
+    top: 5px;
+}
+
+.mo-ticket-stops>span:first-child {
+    text-align: right;
+    color: #595959;
+}
+
+.mo-ticket-stops>span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -8px;
+    margin: auto;
+    width: 7px;
+    height: 7px;
+    background: #bfbfbf;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.mo-ticket-stops>span:first-child::before {
+    left: inherit;
+    background: #595959;
+    width: 10px;
+    height: 10px;
+}
+
+.mo-ticket-stops>span:last-child {
+    text-align: left;
+    color: #595959;
+}
+.mo-ticket-stops>span:last-child::before {
+    right: inherit;
+    background: #595959;
+    width: 10px;
+    height: 10px;
+}
+.mo-ticket-destination {
+    text-align: left;
+}
+
+.mo-ticket-foot {
+    position: relative;
+}
+
+.mo-ticket-foot span {
+    position: absolute;
+    top: -8px;
+    overflow: hidden;
+    height: 15px;
+    left: -9px;
+    right: -9px;
+}
+.mo-ticket-foot span::before {
+    content: '';
+    position: absolute;
+    right: -5px;
+    width: 18px;
+    height: 15px;
+    background: #efefef;
+    border-radius: 10px 0 0 10px;
+    box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.15);
+}
+.mo-ticket-foot span::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    width: 18px;
+    height: 15px;
+    background: #efefef;
+    border-radius: 0 10px 10px 0;
+    box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.15);
+}
+.mo-ticket-foot-content {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 0 9px;
+    align-items: center;
+    min-height: 60px;
+}
+.footer-cont-right {
+    text-align: start;
+    margin-right: 25px;
+}
+
+.mo-ticket-info {
+    text-decoration: none;
+    color: var(--purple);
+    font-weight: bold;
+    position: relative;
+}
+.footer-cont-right a::before {
+    content: '';
+    position: absolute;
+    right: -30px;
+    top: 0;
+    bottom: 4px;
+    margin: auto;
+    height: 23px;
+    width: 23px;
+    background: url(../../../assets/icon/icon.png);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto;
+    background-size: 92px 92px;
+    background-position: -69px -46px;
+}
+.footer-cont-right a::after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 0;
+    bottom: 2px;
+    margin: auto;
+    height: 7px;
+    width: 7px;
+    border: 1px solid var(--purple);
+    border-top-width: 1px;
+    border-right-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-width: 0 0 1px 1px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.footer-cont-left {
+    text-align: end;
+    line-height: 1.2;
+}
+
+.footer-cont-left p {
+    color: var(--purple);
+    font-size: 17px !important;
+    font-weight: bold;
+}
+.footer-cont-left small {
+    color: var(--blue);
+    font-size: 12px !important;
+}

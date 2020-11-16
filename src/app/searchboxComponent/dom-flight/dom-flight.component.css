@@ -20,6 +20,10 @@ input:disabled::placeholder{
     margin: 0px 25px;
 }
 
+.mo-form-group select{
+    border: none;
+}
+
 .mo-form-group input {
     border: none;
 }
@@ -98,7 +102,13 @@ i.mo-icon-date::before {
 i.mo-icon-passenger::before {
     background-position: -36px 0px;
 }
-
+.checkedRoundTrip::after{
+    border-color: orange !important;
+}
+.checkedRoundTrip::before {
+    background-position: -65px -34px !important;
+    opacity: 1 !important;
+}
 .button-submit {
     position: relative;
     bottom: 0;
@@ -109,9 +119,7 @@ i.mo-icon-passenger::before {
 
 .button-submit button {
     width: 100%;
-    background: -moz-linear-gradient(45deg, rgba(6,108,158,1) 0.000%,rgba(31,78,143,1) 85%,rgba(56,49,125,1) 100%);
-    background: -webkit-linear-gradient(45deg, rgba(6,108,158,1) 0.000%,rgba(31,78,143,1) 85%,rgba(56,49,125,1) 100%);
-    background: linear-gradient(45deg, rgba(6,108,158,1) 0.000%,rgba(31,78,143,1) 85%,rgba(56,49,125,1) 100%);
+    background: var(--blueToPurple);
     color: #fff;
     border: none !important;
     padding: 10px 15px;
@@ -119,3 +127,6 @@ i.mo-icon-passenger::before {
     text-align: right;
     bottom: 0;
 }
+
+
+

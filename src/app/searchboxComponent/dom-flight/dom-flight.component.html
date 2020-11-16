@@ -1,33 +1,172 @@
 
 <div class="mo-flight-domestic">
-    <form action="" id="moFlightDOM">
+    <form #moFlightDOM="ngForm" (ngSubmit)="onSubmit(moFlightDOM.value)" action="/ticket/">
         <div class="mo-form-group">
-            <input type="text" id="moOriginFlightDom" placeholder="انتخاب مبدا">
+            <mat-form-field appearance="fill">
+                <mat-label>انتخاب مبدا</mat-label>
+                <mat-select >
+                    <mat-option value="000">انتخاب مبدا</mat-option>
+                    <mat-option value="THR">تهران</mat-option>
+                    <mat-option value="MHD">مشهد</mat-option>
+                    <mat-option value="IFN">اصفهان</mat-option>
+                    <mat-option value="SYZ">شیراز</mat-option>
+                    <mat-option value="KIH">کیش</mat-option>
+                    <mat-option value="TBZ">تبریز</mat-option>
+                    <mat-option value="AWZ">اهواز</mat-option>
+                    <mat-option value="GSM">قشم</mat-option>
+                    <mat-option value="BND">بندرعباس</mat-option>
+                    <mat-option value="ZBR">چابهار</mat-option>
+                    <mat-option value="OMH">ارومیه</mat-option>
+                    <mat-option value="RAS">رشت</mat-option>
+                    <mat-option value="KER">کرمان</mat-option>
+                    <mat-option value="AZD">یزد</mat-option>
+                    <mat-option value="SRY">ساری</mat-option>
+                    <mat-option value="ADU">اردبیل</mat-option>
+                    <mat-option value="KSH">کرمانشاه</mat-option>
+                    <mat-option value="PGU">عسلویه</mat-option>
+                    <mat-option value="LRR">لار</mat-option>
+                    <mat-option value="BUZ">بوشهر</mat-option>
+                    <mat-option value="GBT">گرگان</mat-option>
+                    <mat-option value="ABD">آبادان</mat-option>
+                    <mat-option value="RZR">رامسر</mat-option>
+                    <mat-option value="ZAH">زاهدان</mat-option>
+                    <mat-option value="NSH">نوشهر</mat-option>
+                    <mat-option value="AFZ">سبزوار</mat-option>
+                    <mat-option value="HDM"> همدان</mat-option>
+                    <mat-option value="IIL">ایلام</mat-option>
+                    <mat-option value="SDG">سنندج</mat-option>
+                    <mat-option value="DEF">دزفول</mat-option>
+                    <mat-option value="IHR">ایرانشهر</mat-option>
+                    <mat-option value="XBJ">بیرجند</mat-option>
+                    <mat-option value="CQD">شهرکرد</mat-option>
+                    <mat-option value="SYJ">سیرجان</mat-option>
+                    <mat-option value="BXR">بم</mat-option>
+                    <mat-option value="GCH">گچساران</mat-option>
+                    <mat-option value="BJB">بجنورد</mat-option>
+                    <mat-option value="YES">یاسوج</mat-option>
+                    <mat-option value="LFM">لامرد</mat-option>
+                    <mat-option value="ACZ">زابل</mat-option>
+                    <mat-option value="AJK">اراک</mat-option>
+                    <mat-option value="RJN">رفسنجان</mat-option>
+                    <mat-option value="AKW">آغاجری</mat-option>
+                    <mat-option value="BDH">بندر لنگه</mat-option>
+                    <mat-option value="HDR">هوا دریا</mat-option>
+                    <mat-option value="FAZ">فسا</mat-option>
+                    <mat-option value="JYR">جیرفت</mat-option>
+                    <mat-option value="TCX">طبس</mat-option>
+                    <mat-option value="JAR">جهرم</mat-option>
+                    <mat-option value="KLM">کلاله</mat-option>
+                    <mat-option value="MRX">بندر ماهشهر</mat-option>
+                    <mat-option value="BSM">آمل</mat-option>
+                    <mat-option value="ACP">مراغه</mat-option>
+                    <mat-option value="SXI">جزیره سیری</mat-option>
+                    <mat-option value="LVP">لاوان</mat-option>
+                    <mat-option value="SNX">سمنان</mat-option>
+                    <mat-option value="PFQ">پارس آباد</mat-option>
+                    <mat-option value="KHA">پیرانشهر</mat-option>
+                    <mat-option value="CKT">سرخس</mat-option>
+                    <mat-option value="IAQ">بهرگان</mat-option>
+                </mat-select>
+            </mat-form-field>
             <div class="mo-input-icon">
                 <i class="mo-icon-origin">مبدا</i>
             </div>
         </div>
         <div class="mo-form-group">
-            <input type="text" id="moDestinationFlightDom" placeholder="انتخاب مقصد">
+            <!-- <input type="text" ngModel name="moDestinationFlightDom" placeholder="انتخاب مقصد"> -->
+            <mat-form-field appearance="fill">
+                <mat-label>انتخاب مقصد</mat-label>
+                <mat-select >
+                    <mat-option value="000">انتخاب مبدا</mat-option>
+                    <mat-option value="THR">تهران</mat-option>
+                    <mat-option value="MHD">مشهد</mat-option>
+                    <mat-option value="IFN">اصفهان</mat-option>
+                    <mat-option value="SYZ">شیراز</mat-option>
+                    <mat-option value="KIH">کیش</mat-option>
+                    <mat-option value="TBZ">تبریز</mat-option>
+                    <mat-option value="AWZ">اهواز</mat-option>
+                    <mat-option value="GSM">قشم</mat-option>
+                    <mat-option value="BND">بندرعباس</mat-option>
+                    <mat-option value="ZBR">چابهار</mat-option>
+                    <mat-option value="OMH">ارومیه</mat-option>
+                    <mat-option value="RAS">رشت</mat-option>
+                    <mat-option value="KER">کرمان</mat-option>
+                    <mat-option value="AZD">یزد</mat-option>
+                    <mat-option value="SRY">ساری</mat-option>
+                    <mat-option value="ADU">اردبیل</mat-option>
+                    <mat-option value="KSH">کرمانشاه</mat-option>
+                    <mat-option value="PGU">عسلویه</mat-option>
+                    <mat-option value="LRR">لار</mat-option>
+                    <mat-option value="BUZ">بوشهر</mat-option>
+                    <mat-option value="GBT">گرگان</mat-option>
+                    <mat-option value="ABD">آبادان</mat-option>
+                    <mat-option value="RZR">رامسر</mat-option>
+                    <mat-option value="ZAH">زاهدان</mat-option>
+                    <mat-option value="NSH">نوشهر</mat-option>
+                    <mat-option value="AFZ">سبزوار</mat-option>
+                    <mat-option value="HDM"> همدان</mat-option>
+                    <mat-option value="IIL">ایلام</mat-option>
+                    <mat-option value="SDG">سنندج</mat-option>
+                    <mat-option value="DEF">دزفول</mat-option>
+                    <mat-option value="IHR">ایرانشهر</mat-option>
+                    <mat-option value="XBJ">بیرجند</mat-option>
+                    <mat-option value="CQD">شهرکرد</mat-option>
+                    <mat-option value="SYJ">سیرجان</mat-option>
+                    <mat-option value="BXR">بم</mat-option>
+                    <mat-option value="GCH">گچساران</mat-option>
+                    <mat-option value="BJB">بجنورد</mat-option>
+                    <mat-option value="YES">یاسوج</mat-option>
+                    <mat-option value="LFM">لامرد</mat-option>
+                    <mat-option value="ACZ">زابل</mat-option>
+                    <mat-option value="AJK">اراک</mat-option>
+                    <mat-option value="RJN">رفسنجان</mat-option>
+                    <mat-option value="AKW">آغاجری</mat-option>
+                    <mat-option value="BDH">بندر لنگه</mat-option>
+                    <mat-option value="HDR">هوا دریا</mat-option>
+                    <mat-option value="FAZ">فسا</mat-option>
+                    <mat-option value="JYR">جیرفت</mat-option>
+                    <mat-option value="TCX">طبس</mat-option>
+                    <mat-option value="JAR">جهرم</mat-option>
+                    <mat-option value="KLM">کلاله</mat-option>
+                    <mat-option value="MRX">بندر ماهشهر</mat-option>
+                    <mat-option value="BSM">آمل</mat-option>
+                    <mat-option value="ACP">مراغه</mat-option>
+                    <mat-option value="SXI">جزیره سیری</mat-option>
+                    <mat-option value="LVP">لاوان</mat-option>
+                    <mat-option value="SNX">سمنان</mat-option>
+                    <mat-option value="PFQ">پارس آباد</mat-option>
+                    <mat-option value="KHA">پیرانشهر</mat-option>
+                    <mat-option value="CKT">سرخس</mat-option>
+                    <mat-option value="IAQ">بهرگان</mat-option>
+                </mat-select>
+            </mat-form-field>
             <div class="mo-input-icon">
                 <i class="mo-icon-destination">مقصد</i>
             </div>
         </div>
         <div class="mo-form-group">
             <div class="mo-date-input">
-                <input class="single-datepicker pwt-datepicker-input-element" type="text" id="moDateOneFlightDom" placeholder="رفت" value="" readonly="">
-                <a class="mo-swith-date" aria-pressed="false"></a>
-                <input class="single-datepicker inputDateBack pwt-datepicker-input-element" type="text" id="moDateTwoFlightDom" placeholder="برگشت" value="" data-type-attr="back" disabled readonly>
+                <input type="text" id="moDateOneFlightDom" 
+                        (click)="datpicker($event)" placeholder="رفت"  value="" readonly/>
+                <a class="mo-swith-date" [class.checkedRoundTrip]="!isDisabledInput" (click)=checkRoundTrip()></a>
+                <input id="moDateTwoFlightDom"
+                        (click)="datpicker($event)"  
+                        [disabled]="isDisabledInput"
+                        type="text"  placeholder="برگشت" value="" readonly/>
             </div>
             <div class="mo-input-icon">
                 <i class="mo-icon-date">تاریخ</i>
             </div>
         </div>
         <div class="mo-form-group passengerSelector ">
-            <input type="text" id="moPassengerFlightDom" placeholder="مسافران" class="passengerSelection" readonly=""> 
+            <input type="text" (click)="choosePassenger($event)" id="moPassengerFlightDom" name="moPassengerFlightDom" placeholder="مسافران" class="passengerSelection" [value]="passengerInfoFlightDom" readonly/> 
             <div class="mo-input-icon">
                 <i class="mo-icon-passenger">مسافران</i>
             </div>
+            <input type="hidden" name="class" id="moPassengerFlightDomClass" [value]="passengerFlightInfo.classPassenger">
+            <input type="hidden" name="adult" id="moPassengerFlightDomAdult" [value]="passengerFlightInfo.adultPassenger">
+            <input type="hidden" name="child" id="moPassengerFlightDomChild" [value]="passengerFlightInfo.childPassenger">
+            <input type="hidden" name="infant" id="moPassengerFlightDomInfant" [value]="passengerFlightInfo.infantPassenger">
         </div>
         <div class="button-submit">
             <button type="submit">
@@ -36,3 +175,5 @@
         </div>
     </form>
 </div>
+
+

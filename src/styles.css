@@ -71,4 +71,76 @@ a{
 
 :root {
     --purple: #37307D;
+    --blue:#089ec3;
+    --blueToPurple : linear-gradient(45deg, rgba(6,108,158,1) 0.000%,rgba(31,78,143,1) 85%,rgba(56,49,125,1) 100%);
 }
+
+.datepicker-outer-container.manual-position{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    display: block !important;
+    padding-top: 10% !important;
+}
+.datepicker-inner-container{
+    margin: 0 25px;
+    border: 1px solid var(--purple);
+    padding: 12px;
+    border-radius: 15px;
+}
+.content-container.week-days{
+    background: var(--blueToPurple);
+    color: #fff;
+}
+.datepicker-inner-container .dp-btn:hover{
+    background: var(--purple) !important;
+    color: #fff!important;
+}
+.datepicker-inner-container .switch-view.dp-btn span{
+    font-weight: bold !important;
+    color: var(--purple);
+}
+.content-container.month-days > div.ng-star-inserted:nth-child(7n){
+    color: red;
+    font-weight: bold;
+}
+.display-none{
+    display: none !important;
+}
+.datepicker-outer-container .day-col {
+    border-radius: 8px !important;
+}
+
+
+/*  Mat Selec Box */
+form  mat-form-field{
+    max-height: 45px;
+}
+form .mat-form-field-wrapper {
+    padding-bottom: 16px !important;
+}
+form .mat-form-field-appearance-fill .mat-form-field-flex{
+    padding: 0 !important;
+}
+.cdk-overlay-container .cdk-overlay-pane {
+    position: fixed;
+    top: 5%!important;
+    width: 80vw !important;
+    height: 90vh !important;
+    transform: none !important;
+    right: 5% !important;
+}
+.cdk-overlay-container .mat-select-panel{
+    height: 100% !important;
+    max-height: 100%;
+}
+
+form .mat-form-field-underline{
+    display: none !important;
+}
+
+
+
+
