@@ -30,7 +30,7 @@
                     </span>
                     <span class="changeButtonPassenger">
                         <a class="mo-plus" data-type="plus" for="adult"></a>
-                        <input type="text" name="adult" class="mo-input-number farsiNum"  #adult="ngModel" [(value)]="adultValue" min="1" max="9" readonly [(ngModel)]="passengerModel.adult">
+                        <input type="text" name="adult" class="mo-input-number farsiNum"  #adult="ngModel" [(value)]="passengerModel.adult" min="1" max="9" readonly [(ngModel)]="passengerModel.adult">
                         <a class=" mo-minus" data-type="minus" for="adult"></a>
                     </span>
                 </div>
@@ -41,7 +41,7 @@
                     </span>
                     <span class="changeButtonPassenger">
                         <a class="mo-plus" data-type="plus" for="child"></a>
-                        <input type="text" name="child" class="mo-input-number farsiNum"  #child="ngModel" [(value)]="childValue" min="0" max="9" readonly [(ngModel)]="passengerModel.child">
+                        <input type="text" name="child" class="mo-input-number farsiNum"  #child="ngModel" [(value)]="passengerModel.child" min="0" max="9" readonly [(ngModel)]="passengerModel.child">
                         <a class=" mo-minus" data-type="minus" for="child"></a>
                     </span>
                 </div>
@@ -52,17 +52,15 @@
                     </span>
                     <span class="changeButtonPassenger">
                         <a class="mo-plus" data-type="plus" for="infant"></a>
-                        <input type="text" name="infant" class="mo-input-number farsiNum"  #infant="ngModel" [(value)]="infantValue" min="0" max="9" readonly [(ngModel)]="passengerModel.infant">
+                        <input type="text" name="infant" class="mo-input-number farsiNum"  #infant="ngModel" [(value)]="passengerModel.infant" min="0" max="9" readonly [(ngModel)]="passengerModel.infant">
                         <a class=" mo-minus" data-type="minus" for="infant"></a>
                     </span>
                 </div>
             </div>
         </div>
-        {{passengerModel |json}}
-        {{ passengerForm.value | json}}
         <div class="mo-passenger-info-modal-footer">
             <div class="mo-passenger-info-modal-footer-btn">
-                <a class="closeModal" (click)=closeModal()><button>بازگشت</button></a>
+                <a class="closeModal" (click)=deleted()><button type="button">پاک کردن</button></a>
                 <a  id="acceptPassengerInfo"><button value="" type="submit">برگزیدن </button></a>
             </div>
         </div>

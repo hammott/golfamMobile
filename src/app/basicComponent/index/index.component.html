@@ -6,10 +6,11 @@
             <searchbox-tabs [num]="num" (setTabNum)="getNum($event)"></searchbox-tabs>
         </div>
         <div class="mo-search-box-content">
-            <int-flight-search></int-flight-search>
+            <int-flight-search (runDatePicker)="datePickerRun($event)"
+                                (openPassengerModal)="openModalPassenger($event)"></int-flight-search>
             <dom-flight-search (runDatePicker)="datePickerRun($event)"
                                 (openPassengerModal)="openModalPassenger($event)"
-                                [passengerFlightInfo]=passengerFlightInfo>
+                                [isOpenModal]="isOpenModal">
                 
             </dom-flight-search>
             <tour-search></tour-search>
@@ -32,8 +33,7 @@
 <div class="mo-passenger-info" [class.show-modal]="isOpenModal">
     <div *ngIf=isOpenModal>
         <passenger-modal (closePassengerModal)="closeModalPassenger($event)" 
-                        (acceptPassenger)="acceptPasengerInfo($event)"
-                        [passengerFlightInfo]="passengerFlightInfo"></passenger-modal> 
+                        (acceptPassenger)="acceptPasengerInfo($event)"></passenger-modal> 
                         
     </div>
 </div>

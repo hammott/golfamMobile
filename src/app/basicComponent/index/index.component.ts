@@ -15,12 +15,8 @@ export class IndexComponent implements OnInit {
   public datePickerID;
   public passengerID;
   public isOpenModal = false;
-  public passengerFlightInfo = {
-    classPassenger : 'economy',
-    adultPassenger : 1 , 
-    childPassenger : 0,
-    infantPassenger : 0
-  }
+
+
   config: ConfigModel = {
     date: {
       value: new Date().valueOf(),
@@ -61,9 +57,8 @@ export class IndexComponent implements OnInit {
 
   }
   public openModalPassenger(data){
-    this.isOpenModal = data.isOpenModal;
-    this.passengerID = data.passengerID;
-    console.log(data)
+    this.isOpenModal = data
+
   }
 
   public closeModalPassenger(e){
@@ -79,10 +74,6 @@ export class IndexComponent implements OnInit {
   }
 
   public acceptPasengerInfo(data){
-    this.passengerFlightInfo.classPassenger = data.passengerModel.flightClass;
-    this.passengerFlightInfo.adultPassenger = data.passengerModel.adult;
-    this.passengerFlightInfo.childPassenger = data.passengerModel.child;
-    this.passengerFlightInfo.infantPassenger = data.passengerModel.infant;
     this.isOpenModal = data.isOpenModal;
   }
   public closeDatePicker(){

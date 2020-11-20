@@ -148,7 +148,7 @@
             <div class="mo-date-input">
                 <input type="text" id="moDateOneFlightDom" 
                         (click)="datpicker($event)" placeholder="رفت"  value="" readonly/>
-                <a class="mo-swith-date" [class.checkedRoundTrip]="!isDisabledInput" (click)=checkRoundTrip()></a>
+                <a class="mo-swith-date" [class.checkedRoundTrip]="!isDisabledInput" (click)="checkRoundTrip()"></a>
                 <input id="moDateTwoFlightDom"
                         (click)="datpicker($event)"  
                         [disabled]="isDisabledInput"
@@ -159,14 +159,16 @@
             </div>
         </div>
         <div class="mo-form-group passengerSelector ">
-            <input type="text" (click)="choosePassenger($event)" id="moPassengerFlightDom" name="moPassengerFlightDom" placeholder="مسافران" class="passengerSelection" [value]="passengerInfoFlightDom" readonly/> 
+            <input type="text" (click)="choosePassenger($event)" id="moPassengerFlightDom" 
+                    name="moPassengerFlightDom" placeholder="مسافران" 
+                    class="passengerSelection" [value]="passengerInfo.text" readonly/> 
             <div class="mo-input-icon">
                 <i class="mo-icon-passenger">مسافران</i>
             </div>
-            <input type="hidden" name="class" id="moPassengerFlightDomClass" [value]="passengerFlightInfo.classPassenger">
-            <input type="hidden" name="adult" id="moPassengerFlightDomAdult" [value]="passengerFlightInfo.adultPassenger">
-            <input type="hidden" name="child" id="moPassengerFlightDomChild" [value]="passengerFlightInfo.childPassenger">
-            <input type="hidden" name="infant" id="moPassengerFlightDomInfant" [value]="passengerFlightInfo.infantPassenger">
+            <input type="hidden" name="class" id="moPassengerFlightDomClass" [value]="passengerInfo.flightClass">
+            <input type="hidden" name="adult" id="moPassengerFlightDomAdult" [value]="passengerInfo.adult">
+            <input type="hidden" name="child" id="moPassengerFlightDomChild" [value]="passengerInfo.child">
+            <input type="hidden" name="infant" id="moPassengerFlightDomInfant" [value]="passengerInfo.infant">
         </div>
         <div class="button-submit">
             <button type="submit">

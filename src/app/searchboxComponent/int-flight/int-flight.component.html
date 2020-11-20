@@ -16,19 +16,25 @@
         </div>
         <div class="mo-form-group">
             <div class="mo-date-input">
-                <input class="single-datepicker pwt-datepicker-input-element" type="text" id="moDateOneFlightInt" placeholder="رفت" value="" readonly="">
-                <a class="mo-swith-date" aria-pressed="false"></a>
-                <input class="single-datepicker inputDateBack pwt-datepicker-input-element" type="text" id="moDateTwoFlightInt" placeholder="برگشت" value="" data-type-attr="back" disabled readonly>
+                <input  (click)="datpicker($event)" type="text" id="moDateOneFlightInt" placeholder="رفت" value="" readonly="">
+                <a class="mo-swith-date" [class.checkedRoundTrip]="!isDisabledInput" (click)="checkRoundTrip()"></a>
+                <input (click)="datpicker($event)" [disabled]="isDisabledInput" type="text" id="moDateTwoFlightInt" placeholder="برگشت" value="" data-type-attr="back" disabled readonly>
             </div>
             <div class="mo-input-icon">
                 <i class="mo-icon-date">تاریخ</i>
             </div>
         </div>
         <div class="mo-form-group passengerSelector ">
-            <input type="text" id="moPassengerFlightInt" placeholder="مسافران" class="passengerSelection" readonly=""> 
+            <input (click)="choosePassenger($event)"type="text" id="moPassengerFlightInt" 
+                    placeholder="مسافران" class="passengerSelection" readonly=""
+                    [value] = "passengerInfo.text"> 
             <div class="mo-input-icon">
                 <i class="mo-icon-passenger">مسافران</i>
             </div>
+            <input type="hidden" name="class" id="moPassengerFlightIntClass" [value]="passengerInfo.flightClass">
+            <input type="hidden" name="adult" id="moPassengerFlightIntAdult" [value]="passengerInfo.adult">
+            <input type="hidden" name="child" id="moPassengerFlightIntChild" [value]="passengerInfo.child">
+            <input type="hidden" name="infant" id="moPassengerFlightIntInfant" [value]="passengerInfo.infant">
         </div>
         <div class="button-submit">
             <button type="submit">

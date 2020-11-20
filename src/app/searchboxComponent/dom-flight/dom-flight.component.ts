@@ -1,6 +1,7 @@
-import { Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {TicketService } from '../../ticket.service'
-
+import { Passenger } from '../../generalComponent/passenger-select/passenger';
+import {PassengerInteractionService} from '../../passenger-interaction.service'
 const tickets= {
   'passenger':'1-0-0-1',
   'dep_date':'1399/08/27',
@@ -52,11 +53,10 @@ console.log(ticketData)
   styleUrls: ['./dom-flight.component.css']
 })
 
-export class DomFlightComponent implements OnInit {
+export class DomFlightComponent implements OnInit , OnChanges {
   
   @Input() isDatepicker ;
   @Input() isOpenModal;
-  @Input() passengerFlightInfo ;
   @Output() runDatePicker = new EventEmitter<any>();
 
   @Output() openPassengerModal = new EventEmitter<any>();
@@ -64,17 +64,20 @@ export class DomFlightComponent implements OnInit {
   public isDisabledInput:boolean = true;
   datePickerID:string;
   passengerID:string;
-  public passengerInfoFlightDom :string = '1 مسافر , اکونومی';
-  // public passengerInfo = {
-  //   classPassenger : 'economy',
-  //   adultPassenger : 1 , 
-  //   childPassenger : 0,
-  //   infantPassenger : 0
-  // }
-  constructor(private _ticketService : TicketService) { }
+  public passengerInfo = new Passenger ('economy' , 'اکونوکی' , 1,0,0,1 , '1 مسافر , اکونومی');
+
+  public passengerInfoFlightDomHTML = `${this.passengerInfo.adult + this.passengerInfo.child + this.passengerInfo.infant} مسافر`;
+  constructor(private _ticketService : TicketService,
+              private _passengerservice:PassengerInteractionService) { }
   
+
   ngOnInit(): void {
   }
+
+  ngOnChanges (changes: SimpleChanges){
+    changes.passengerDomFlightInfo;
+  }
+
   onSubmit(data){
     console.log(ticketData);
     this._ticketService.ticketDomPost("passenger=1-0-0-1&dep_date=1399%2F08%2F27&class=economy&t%2Fthr-kih%2F%3Fpassenger=1-0-0-1&custom_webservice=11&is_domestic=1&adult=1&infant=0&child=0&trip=oneway&ret_date=&domestice_departure_code=THR&domestice_destination_code=KIH&domestice_departure_code_ret=&domestice_destination_code_ret=&departure_code_ret_fieldvalue=&destination_code_ret_fieldvalue=&time=1605364182&is_mobile=false&view_mode=full&way_mode=go").subscribe(
@@ -104,14 +107,8 @@ export class DomFlightComponent implements OnInit {
     var target = e.target || e.srcElement || e.currentTarget;
     this.passengerID = target.getAttribute('id');
     this.isOpenModal = true;
-    console.log(this.passengerFlightInfo)
-    this.openPassengerModal.emit({isOpenModal:this.isOpenModal , 
-                                  passengerID: this.passengerID,
-                                  classPassenger: this.passengerFlightInfo.classPassenger,
-                                  adultPassenger: this.passengerFlightInfo.adultPassenger,
-                                  childPassenger:this.passengerFlightInfo.childPassenger,
-                                  infantPassenger: this.passengerFlightInfo.infantPassenger
-                                });
+    this.openPassengerModal.emit(this.isOpenModal);
+    this._passengerservice.loadPassenger(this.passengerInfo)
   }
 
 }
